@@ -1,2 +1,12 @@
 # ctxjoin
-A library to add join the cancellation of multiple contexts
+
+A library to join contexts in various manners.
+
+```go
+func doSomething() {
+    ctx, cancel := ctxjoin.AddCancel(ctx, someExtraCancelableContext)
+    defer cancel()
+
+    // ...
+}
+```
