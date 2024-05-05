@@ -5,12 +5,6 @@ import (
 	"time"
 )
 
-var closedChan = make(chan struct{})
-
-func init() {
-	close(closedChan)
-}
-
 type cancelContext struct {
 	ctx   context.Context
 	extra context.Context
